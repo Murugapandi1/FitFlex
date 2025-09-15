@@ -1,0 +1,155 @@
+
+.contact {
+  padding: 70px 20px;
+  background: linear-gradient(to right, #00ffc8, #ffffff);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+  animation: fadeDown 1s ease forwards;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  animation: fadeDown 1.2s ease forwards;
+}
+
+/* Container: form + info */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideInLeft 1s ease forwards;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ffb400;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #ffb400;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #d35400;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideInRight 1s ease forwards;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 8px 0;
+}
+
+/* Social icons */
+.contact-socials {
+  margin-top: 15px;
+}
+
+.contact-socials a {
+  margin-right: 12px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #ffb400;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-socials a:hover {
+  color: #d35400;
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
